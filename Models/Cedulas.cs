@@ -6,10 +6,16 @@ namespace H_J_Trablas.Models
     {public int Id { get; set; }
 
         [Required]
-        public string Name { get; set; }
+        public string? Nombre { get; set; }
+        
+        [Required]
+        public string? Cedula { get; set; }
+
+        public bool Soltero { get; set; }
+
         public bool Casado {  get; set; }
 
-        [Range(0,9999.99)]
-        public decimal Estado { get; set; }
+        [Required]
+        public string? Hijos { get; set; }
     }
 }

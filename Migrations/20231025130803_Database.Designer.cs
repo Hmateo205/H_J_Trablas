@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace H_J_Trablas.Migrations
 {
     [DbContext(typeof(H_J_TrablasContext))]
-    [Migration("20231025122545_Basededatos")]
-    partial class Basededatos
+    [Migration("20231025130803_Database")]
+    partial class Database
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -34,12 +34,20 @@ namespace H_J_Trablas.Migrations
                     b.Property<bool>("Casado")
                         .HasColumnType("bit");
 
-                    b.Property<decimal>("Estado")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<string>("Name")
+                    b.Property<string>("Cedula")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Hijos")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("Soltero")
+                        .HasColumnType("bit");
 
                     b.HasKey("Id");
 

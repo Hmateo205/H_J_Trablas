@@ -32,12 +32,20 @@ namespace H_J_Trablas.Migrations
                     b.Property<bool>("Casado")
                         .HasColumnType("bit");
 
-                    b.Property<decimal>("Estado")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<string>("Name")
+                    b.Property<string>("Cedula")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Hijos")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("Soltero")
+                        .HasColumnType("bit");
 
                     b.HasKey("Id");
 

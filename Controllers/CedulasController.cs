@@ -56,7 +56,7 @@ namespace H_J_Trablas.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Casado,Estado")] Cedulas cedulas)
+        public async Task<IActionResult> Create([Bind("Id,Nombre,Cedula,Soltero,Casado,Hijos")] Cedulas cedulas)
         {
             if (ModelState.IsValid)
             {
@@ -88,7 +88,7 @@ namespace H_J_Trablas.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Casado,Estado")] Cedulas cedulas)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Nombre,Cedula,Soltero,Casado,Hijos")] Cedulas cedulas)
         {
             if (id != cedulas.Id)
             {
